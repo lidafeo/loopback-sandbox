@@ -31,5 +31,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Project": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Stage": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "Executive": {
+    "dataSource": "transient",
+    "public": false
   }
 }

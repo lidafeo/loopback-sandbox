@@ -1,0 +1,41 @@
+{
+  "name": "Project",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": false
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "stagesRel": {
+      "type": "embedsMany",
+      "model": "Stage",
+      "property": "stages",
+      "options": {
+        "validate": false
+      }
+    }
+  },
+  "acls": [],
+  "methods": {
+    "setStages": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "result",
+          "type": "boolean",
+          "root": true
+        }
+      ],
+      "http": {
+        "verb": "post",
+        "path": "/setStages"
+      }
+    }
+  }
+}

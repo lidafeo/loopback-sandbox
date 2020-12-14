@@ -1,0 +1,30 @@
+{
+  "name": "Stage",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": false
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "number": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "executivesRel": {
+      "type": "embedsMany",
+      "model": "Executive",
+      "property": "executives",
+      "options": {
+        "validate": false
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
